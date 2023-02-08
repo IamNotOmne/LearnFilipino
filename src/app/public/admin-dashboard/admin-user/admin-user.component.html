@@ -1,0 +1,123 @@
+<div class="adminContainer">
+  <div class="forTeachers">
+    <h3>Lists of Teachers</h3>
+    <table class="table">
+      <thead class="thead-color">
+        <tr>
+          <th scope="col">ID Number</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">City</th>
+          <th scope="col">School Graduated</th>
+          <th scope="col">Degree</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let article of articles">
+          <th scope="row">{{article.id}}</th>
+          <td>{{article.firstname}}</td>
+          <td>{{article.lastname}}</td>
+          <td>{{article.email}}</td>
+          <td>{{article.city}}</td>
+          <td>{{article.school_graduated}}</td>
+          <td>{{article.degree}}</td>
+        </tr>
+        <!-- <tr>
+          <th scope="row">2</th>
+          <td>Vanessa</td>
+          <td>Sagolili</td>
+          <td>van@gmail.com</td>
+          <td>November 2, 2001</td>
+          <td>Harvard University</td>
+          <td>Tagbilaran City</td>
+
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Jamaila</td>
+          <td>Paquiabas</td>
+          <td>jamaila@gmail.com</td>
+          <td>May 16, 2002</td>
+          <td>Ateneo De Manila University</td>
+          <td>Iligan City</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Leah</td>
+          <td>Mangmang</td>
+          <td>leah@gmail.com</td>
+          <td>March 04, 2002</td>
+          <td>De Lasalle University</td>
+          <td>Talibon, Bohol</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+  <!--For Applicants-->
+  <div class="forApplicants">
+    <h3>Lists of Applicants</h3>
+    <table class="table">
+      <thead class="thead-color">
+        <tr>
+          <th scope="col">ID Number</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">City</th>
+          <th scope="col">Degree</th>
+          <th scope="col">School Graduated</th>
+          <th scope="col">Description</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let teacher of TeacherArray">
+          <th scope="row">{{teacher.id}}</th>
+          <td>{{teacher.firstname}}</td>
+          <td>{{teacher.lastname}}</td>
+          <td>{{teacher.email}}</td>
+          <td>{{teacher.city}}</td>
+          <td>{{teacher.degree}}</td>
+          <td>{{teacher.school_graduated}}</td>
+          <td>{{teacher.description}}</td>
+          <td>
+            <button class="btn btn-success" routerLink="/admin-edit/{{teacher.id}}"><i class="fa-solid fa-check"></i></button>
+              <button class="btn btn-danger" (click)="setDelete(teacher)"><i class="fa-solid fa-xmark"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- End of For Applicants-->
+
+  <!--Students-->
+  <div class="forStudents">
+    <h3>Lists of Stdents</h3>
+    <table class="table">
+      <thead class="thead-color">
+        <tr>
+          <th scope="col">ID Number</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Birthdate</th>
+          <th scope="col">Country of Residence</th>
+          <th scope="col">City</th>
+          <th scope="col">Language</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of StudentArray">
+          <td scope="row">{{student.id}}</td>
+          <td>{{student.firstname}}</td>
+          <td>{{student.lastname}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.birthdate}}</td>
+          <td>{{student.inputCountry}}</td>
+          <td>{{student.city}}</td>
+          <td>{{student.inputState}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

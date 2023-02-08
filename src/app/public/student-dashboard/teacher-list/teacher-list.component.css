@@ -1,0 +1,64 @@
+body {
+  background: #ffffff;
+  /* height: 100vh; */
+
+}
+/*Teacher Card*/
+.contain {
+  margin: 60px 20px 20px 20px;
+
+}
+
+#iconCard {
+  height: 80px;
+  width: 80px;
+  float: right;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+/*End Teacher Cards*/
+
+/*Book Modal*/
+.booking{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#time{
+  width: 150px;
+}
+#bookBtn{
+  width: 90px;
+}
+
+#code{
+  height: 80px;
+  width: 80px;
+}
+
+.qrCode{
+  float: right;
+  border: 1px solid blue;
+}
+.backDash{
+  margin-left: 10px;
+}

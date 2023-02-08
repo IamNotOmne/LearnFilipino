@@ -1,0 +1,66 @@
+
+<body>
+
+  <div class="formCont">
+    <form class="row g-3" (ngSubmit)="inserData()">
+      <div class="title"><h4>{{titleStudent}}</h4></div>
+      <div class="col-md-6">
+        <label for="firstname" class="form-label">First Name</label>
+        <input type="text" class="form-control" name="firstname" required  [(ngModel)]="createaccount.firstname" placeholder="Firstname ">
+      </div>
+      <div class="col-md-6">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input type="text" class="form-control" name="lastname" required [(ngModel)]="createaccount.lastname" placeholder="Lastname">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" required placeholder="Example@gmail.com" [(ngModel)]="createaccount.email">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" required [(ngModel)]="createaccount.password" placeholder="Password">
+      </div>
+      <div class="col-6">
+        <label for="birthdate" class="form-label">Birthdate</label>
+        <input type="date" class="form-control" name="birthdate" required [(ngModel)]="createaccount.birthdate">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCountry" class="form-label">Country of Residence</label>
+        <input type="text" class="form-control" name="inputCountry" required [(ngModel)]="createaccount.inputCountry" placeholder="Country of Residence">
+      </div>
+      <div class="col-md-6">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control" name="city" required placeholder="Ex. Cebu City" [(ngModel)]="createaccount.city">
+      </div>
+      <div class="col-md-6">
+        <label for="inputState" class="form-label">Language Spoken</label>
+        <input type="text" class="form-control" name="password" required  [(ngModel)]="createaccount.inputState" placeholder="Ex. French">
+      </div>
+
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            I have read the <span><a href="">Terms and Conditions</a></span>
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <a >
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </a>
+
+        <!-- routerLink="/login" -->
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+
+
+</body>
+

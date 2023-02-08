@@ -1,0 +1,24 @@
+
+<body>
+  <div class="boxContainer">
+    <div class="logoCont">
+      <img [src]="icon" alt="SF_logo">
+    </div>
+    <div class="inputCont">
+      <form #loginForm="ngForm" (ngSubmit)="submitLogin()">
+        <h3 id="studentText">Student Login</h3>
+        <input id="inputBox" type="text" placeholder="Email" required [(ngModel)]="form.email">
+        <br>
+        <input type="password" placeholder="Password" required [(ngModel)]="form.password">
+        <br>
+        <div id="loginBtn">
+          <button>LOG IN</button>
+        </div>
+        <p id="signUp">Don't have an account? <span id="signUp-mr"><a routerLink="/create-account"> Create account</a></span></p>
+      </form>
+      <!-- (click)="logIn()" -->
+    </div>
+
+   </div>
+
+</body>

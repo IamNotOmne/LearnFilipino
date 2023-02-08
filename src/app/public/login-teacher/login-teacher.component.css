@@ -1,0 +1,69 @@
+
+ body{
+  box-sizing: border-box;
+  background-color: #0033a0a2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxContainer{
+ display: inline-flex;
+ justify-content: space-around;
+
+
+}
+.logoCont img{
+ position: relative;
+ width: 450px;
+ height: 400px;
+ margin-right:150px;
+ margin-left:12px;
+}
+
+.inputCont{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 400px;
+ background: #FFFFFF;
+ border-radius: 15px;
+ border: none;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+ padding: 10px;
+
+ height: 400px;
+}
+#loginBtn button:hover{
+  background-color: #0032A0;
+}
+
+input{
+ height: 40px;
+ width: 340px;
+ margin: 10px;
+ border: none;
+ border-radius: 5px;
+ padding: 10px;
+}
+#loginBtn{
+ display: flex;
+ justify-content: center;
+}
+#loginBtn button{
+ width: 80px;
+ height: 40px;
+ border: none;
+ border-radius: 10px;
+ background-color: #0d6efd;;
+ margin: 10px;
+ color: white;
+}
+
+
+#teacherText{
+  text-align: center;
+  color: #0032A0;
+  /* margin-top: 20px; */
+}

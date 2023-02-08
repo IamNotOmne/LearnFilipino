@@ -1,0 +1,79 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background: violet;
+  height: 100vh;
+}
+/*Student Details*/
+.studentDetails{
+  color: white;
+  background-color: blue;
+  width: 100%;
+  height: 40vh;
+
+}
+.Details{
+  margin-top: 46px;
+  display: inline-flex;
+  justify-content: space-around;
+
+}
+
+#picture{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#file{
+  width: 200px;
+  height: 50px;
+  padding: 5px;
+  float: left;
+  margin-top: 1vh;
+  border-radius: 5px;
+}
+.userName{
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.userName span{
+  margin-top: 10vh;
+  padding-left: 15px;
+}
+.userInfo{
+  margin-top: 10vh;
+  margin-left: 40vh;
+  font-size: 20px;
+
+}
+.userInfo ul li{
+  list-style-type: none;
+}
+#file{
+  background: black;
+  color: white;
+}
+/*End Student Details*/
+
+/*Appointments*/
+.studentCont{
+  background: white;
+  height: 70vh;
+  padding: 20px;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.appointBox{
+  padding: 10px;
+  width: 600px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

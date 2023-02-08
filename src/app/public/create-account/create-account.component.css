@@ -1,0 +1,38 @@
+
+form
+{
+  margin: 20px;
+  width: 700px;
+
+}
+.formCont{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+}
+.title{
+
+margin-top: 90px;
+display: flex;
+justify-content: center;
+}
+
+.choices
+{
+  position: fixed;
+}
+.form-label{
+  display: flex;
+  justify-content: center;
+}
+/* .form-control{
+  width: 30vh;
+} */
+
+.ng-invalid:not(form){
+  border-left: 5px solid red;
+}
+.ng-valid:not(form){
+  border-left: 5px solid green;
+}

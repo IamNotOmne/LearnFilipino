@@ -1,0 +1,36 @@
+<form class="row g-3 needs-validation m-5 p-5" (ngSubmit)="acceptTeacher()">
+  <h1>Accept Booking</h1>
+  <div class="col-lg-6">
+    <label for="firstname" class="form-label">First name</label>
+    <input type="text" class="form-control" name="firstname" id="firstname" [(ngModel)]="book.firstname" >
+  </div>
+  <div class="col-lg-6">
+    <label for="lastname" class="form-label">Last name</label>
+    <input type="text" class="form-control" name="lastname" id="lastname" [(ngModel)]="book.lastname" >
+  </div>
+  <div class="col-lg-6">
+    <label for="email" class="form-label">Email</label>
+    <div class="input-group has-validation">
+      <input type="email" class="form-control" name="email" id="email" [(ngModel)]="book.email" >
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <label for="email" class="form-label">Date</label>
+    <div class="input-group has-validation">
+      <input type="email" class="form-control" name="date" id="date" [(ngModel)]="book.date">
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <label for="city" class="form-label">Start Time</label>
+    <input type="text" class="form-control" name="sTime" id="city"  [(ngModel)]="book.sTime" >
+  </div>
+  <div class="col-lg-6">
+    <label for="degree" class="form-label">Number of Hours</label>
+    <input type="text" class="form-control" name="eTime" id="degree"  [(ngModel)]="book.eTime" >
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-warning" type="submit">Accept</button>
+  </div>
+</form>
+<router-outlet></router-outlet>

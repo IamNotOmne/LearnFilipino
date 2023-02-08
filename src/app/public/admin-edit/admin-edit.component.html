@@ -1,0 +1,53 @@
+<form class="row g-3 needs-validation m-5 p-5" (ngSubmit)="acceptTeacher()">
+  <h1>ACCEPT TEACHERS</h1>
+  <div class="col-lg-6">
+    <label for="firstname" class="form-label">First name</label>
+    <input type="text" class="form-control" name="firstname" id="firstname" [(ngModel)]="teacher.firstname" >
+  </div>
+  <div class="col-lg-6">
+    <label for="lastname" class="form-label">Last name</label>
+    <input type="text" class="form-control" name="lastname" id="lastname" [(ngModel)]="teacher.lastname" >
+  </div>
+  <div class="col-lg-6">
+    <label for="email" class="form-label">Email</label>
+    <div class="input-group has-validation">
+      <input type="email" class="form-control" name="email" id="email" [(ngModel)]="teacher.email" >
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <label for="email" class="form-label">Password</label>
+    <div class="input-group has-validation">
+      <input type="email" class="form-control" name="password" id="email" [(ngModel)]="teacher.password">
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <label for="city" class="form-label">City</label>
+    <input type="text" class="form-control" name="city" id="city"  [(ngModel)]="teacher.city" >
+  </div>
+  <div class="col-lg-6">
+    <label for="degree" class="form-label">Degree</label>
+    <input type="text" class="form-control" name="degree" id="degree"  [(ngModel)]="teacher.degree" >
+  </div>
+  <div class="col-lg-6">
+    <label for="school_graduated" class="form-label">School Graduated</label>
+    <input type="text" class="form-control" name="school_graduated" id="school_graduated"
+      [(ngModel)]="teacher.school_graduated" >
+  </div>
+  <div class="col-lg-6">
+    <label for="degree" class="form-label">G-Cash QR Code</label>
+    <input type="file" class="form-control" name="qrCode" id="qrCode"  [(ngModel)]="teacher.qrCode" >
+  </div>
+  <div class="col-lg-6">
+    <label for="degree" class="form-label">Language/s</label>
+    <input type="text" class="form-control" name="language" id="language"  [(ngModel)]="teacher.language" >
+  </div>
+  <div class="col-lg-12">
+    <label for="description" class="form-label">Description</label>
+    <textarea class="form-control" name="description" id="description" rows="3"
+      [(ngModel)]="teacher.description"></textarea>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-warning" type="submit">Accept</button>
+  </div>
+</form>
+<router-outlet></router-outlet>

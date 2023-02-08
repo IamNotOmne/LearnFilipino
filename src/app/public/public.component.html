@@ -1,0 +1,28 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img [src]="icon" alt="" class="logo"></a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" routerLink="/"><span class="m-icon material-symbols-rounded">
+          home
+          </span></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="teacher" routerLink="/teacher-list">Teachers</a>
+      </li> -->
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Log In</a>
+        <div class="dropdown-content">
+          <a href="/login">Student</a>
+          <a href="/login-teacher">Teacher</a>
+          <a href="/login-admin">Admin</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+

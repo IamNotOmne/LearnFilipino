@@ -1,0 +1,141 @@
+
+.cover{
+  background-image: url(https://i.pinimg.com/originals/4c/99/95/4c9995a0371deae86a4a3275bc5685b8.png);
+
+  height: 80vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card{
+  height: 300px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.577); /* Black w/opacity/see-through */
+  border: none;
+  color: white;
+}
+.userApply{
+  margin-top: 15vh;
+}
+.int{
+  text-align: center;
+  padding: 50px;
+}
+.first
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.one{
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+  height: auto;
+  margin: 10px;
+}
+.example{
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+  height: auto;
+  margin: 10px;
+}
+p{
+  font-style: italic;
+}
+
+.hr{
+  width: 80px;
+  height: 5px;
+  background-color: red;
+  border: none;
+  margin-left: 75vh;
+}
+hr{
+  color: red;
+}
+.apply{
+  width: 100px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: blue;
+}
+.apply:hover{
+  background-color: rgb(63, 63, 240);
+  transition: .5s ease;
+}
+.join{
+  width: 100px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: blue;
+}
+.join:hover{
+  background-color: rgb(63, 63, 240);
+  transition: .5s ease;
+}
+
+/* Apply */
+#applyCont{
+  display: flex;
+  justify-content: center;
+}
+.forapply
+{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0033a0b2;
+}
+form{
+  width: 650px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+h1{
+  text-align: center;
+  margin: 20px;
+}
+
+
+.aboutFilipino{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.aboutfil{
+  position: relative;
+  flex: 1;
+  max-width: 900px;
+  margin: 20px;
+}
+.paragraph{
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.communication{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.proper{
+  position: relative;
+  flex: 1;
+  max-width: 900px;
+  margin: 20px;
+}
+
+.form-check a{
+  color: white;
+}
+

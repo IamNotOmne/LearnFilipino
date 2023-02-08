@@ -1,0 +1,21 @@
+
+<body>
+  <div class="boxContainer">
+    <div class="logoCont">
+      <img [src]="icon" alt="SF_logo">
+    </div>
+    <div class="inputCont">
+      <form #loginForm="ngForm" (ngSubmit)="submitLogin()">
+       <h3 id="teacherText">Teacher Login</h3><hr>
+        <input type="text" placeholder="Email" required [(ngModel)]="form.email">
+        <br>
+        <input type="password" placeholder="Password" required [(ngModel)]="form.password">
+        <br>
+        <div id="loginBtn">
+          <a><button>LOG IN</button></a>
+
+        </div>
+      </form>
+    </div>
+   </div>
+</body>

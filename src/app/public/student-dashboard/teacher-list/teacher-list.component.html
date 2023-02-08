@@ -1,0 +1,260 @@
+<body>
+<br>
+  <div class="backDash">
+    <a href="/student-dashboard">
+      <button class="btn btn-info">Go back to my dashboard</button>
+    </a>
+  </div>
+  <br>
+  <div class="contain">
+    <div class="row">
+      <div class="card">
+        <!-- <h5 class="card-header">Beginner's Level</h5> -->
+        <div class="card-body">
+          <div class="infos">
+            <img id="iconCard" src="assets/img/leah.jpg" alt="">
+            <h5>Teacher Leah</h5>
+            <p>Hour Rate: &#8369; 150</p>
+            <h5>Info:</h5>
+            <p>Name: Leah Mangmang</p>
+            <p>Bachelor's Degree: Certificate of Computer Technology</p>
+            <p>School Graduated: BISU </p>
+            <p>Langugage/s: French</p>
+            <div class="qrCode">
+              <img id="code" src="assets/img/oms_qrCode.PNG" alt="">
+            </div>
+          </div>
+
+          <div class="booking">
+            <button class="btn btn-lg btn-outline-primary" (click)="open1(content1)">Book Now</button>
+          </div>
+        </div>
+
+      </div>
+
+      <ng-template #content1 let-modal >
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Schedule Session with Teacher Leah</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="insertBook()">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="firstName" placeholder="First Name" required name="firstname"
+                [(ngModel)]="book.firstname">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name" required name="lastname"
+                [(ngModel)]="book.lastname">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" [(ngModel)]="book.email">
+
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Date</label>
+              <input type="date" class="form-control" name="schedule" [(ngModel)]="book.date">
+              <div>
+                <label for="exampleInputEmail1" class="form-label">Start Time</label>
+                <input type="time" class="form-control" name="schedule" [(ngModel)]="book.sTime">
+                <label for="exampleInputEmail1" class="form-label">Hour</label>
+                <input type="text" class="form-control" name="schedule" [(ngModel)]="book.eTime">
+              </div>
+
+            </div>
+
+            <!--
+            <div class="mb-3">
+              <label for="scheddate" class="form-label">Schedule Date</label>
+
+              <ejs-schedule width='100%' height='550px' [selectedDate]="selectedDate"
+              [eventSettings]="eventSettings" formControlName="Date"></ejs-schedule>
+            </div> -->
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+            </div>
+          </form>
+        </div>
+
+      </ng-template>
+
+      <div class="card">
+        <!-- <h5 class="card-header">Beginner's Level</h5> -->
+        <div class="card-body">
+          <img id="iconCard" src="assets/img/van.jpg" alt="">
+          <h5 class="card-title">Teacher Van</h5>
+          <p>Hour Rate: &#8369; 800</p>
+          <h5>Info:</h5>
+          <p>Name: Vanessa Sagolili</p>
+          <p>Bachelor's Degree: {{degree}}</p>
+          <p>School Graduated: Harvard University </p>
+          <p>Langugage/s: Spanish, Korean</p>
+          <div class="qrCode">
+            <img id="code" src="assets/img/oms_qrCode.PNG" alt="">
+          </div>
+          <div class="booking">
+            <button class="btn btn-lg btn-outline-primary" (click)="open2(content2)">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #content2 let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Schedule Session with Teacher Van</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+
+            <div class="mb-3">
+              <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Date</label>
+              <input type="date" class="form-control" name="schedule" [(ngModel)]="book.date">
+              <div>
+                <label for="exampleInputEmail1" class="form-label">Start Time</label>
+                <input type="time" class="form-control" name="schedule" [(ngModel)]="book.sTime">
+                <label for="exampleInputEmail1" class="form-label">End Time</label>
+                <input type="time" class="form-control" name="schedule" [(ngModel)]="book.eTime">
+              </div>
+
+            </div>
+            <!-- <div class="mb-3">
+              <label for="scheddate" class="form-label">Schedule Date</label>
+              <ejs-schedule width='100%' height='550px' [selectedDate]="selectedDate"
+                [eventSettings]="eventSettings"></ejs-schedule>
+
+            </div> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+      </ng-template>
+
+    </div>
+    <div class="row">
+      <div class="card">
+        <div class="card-body">
+          <img id="iconCard" src="assets/img/mai.jpg" alt="">
+          <h5 class="card-title">Teacher Mai</h5>
+          <p>Hour Rate: &#8369; 800</p>
+          <h5>Info:</h5>
+          <p>Name: Maila Swift</p>
+          <p>Bachelor's Degree: {{degree}}</p>
+          <p>School Graduated: Harvard University </p>
+          <p>Langugage/s: Spanish, Korean</p>
+          <div class="qrCode">
+            <img id="code" src="assets/img/oms_qrCode.PNG" alt="">
+          </div>
+          <div class="booking">
+            <button class="btn btn-lg btn-outline-primary" (click)="opent3(content3)">Book Now</button>
+          </div>
+        </div>
+
+        <ng-template #content3 let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Schedule Session with Teacher Mai</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Date</label>
+                <input type="date" class="form-control" name="schedule" [(ngModel)]="book.date">
+                <div>
+                  <label for="exampleInputEmail1" class="form-label">Start Time</label>
+                  <input type="time" class="form-control" name="schedule" [(ngModel)]="book.sTime">
+                  <label for="exampleInputEmail1" class="form-label">End Time</label>
+                  <input type="time" class="form-control" name="schedule" [(ngModel)]="book.eTime">
+                </div>
+
+              </div>
+              <!-- <div class="mb-3">
+                <label for="scheddate" class="form-label">Schedule Date</label>
+                <ejs-schedule width='100%' height='550px' [selectedDate]="selectedDate"
+                  [eventSettings]="eventSettings"></ejs-schedule>
+              </div> -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+          </div>
+        </ng-template>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <img id="iconCard" src="assets/img/oms.jpg" alt="">
+          <h5 class="card-title">Teacher Mel</h5>
+          <p>Hour Rate: &#8369; 800</p>
+          <h5>Info:</h5>
+          <p>Name: Mel BAcor</p>
+          <p>Bachelor's Degree: Certificate of Computer Technology</p>
+          <p>School Graduated: BISU </p>
+          <p>Langugage/s: Spanish, Korean</p>
+          <div class="qrCode">
+            <img id="code" src="assets/img/oms_qrCode.PNG" alt="">
+          </div>
+          <div class="booking">
+            <button class="btn btn-lg btn-outline-primary" (click)="open4(content4)">Book Now</button>
+          </div>
+        </div>
+
+        <ng-template #content4 let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Schedule Session with Teacher Leah</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+              </div>
+              <div class="mb-3">
+                <label for="scheddate" class="form-label">Schedule Date</label>
+                <ejs-schedule width='100%' height='550px' [selectedDate]="selectedDate"
+                  [eventSettings]="eventSettings"></ejs-schedule>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+          </div>
+        </ng-template>
+      </div>
+
+    </div>
+  </div>
+</body>
+<router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+.adminContainer{
+  margin-top: 15vh;
+}
+
+.forStudents{
+  padding: 20px;
+  margin-top: 10px;
+}
+.forTeachers{
+  padding: 20px;
+  margin-top: 10px;
+
+}
+.forApplicants{
+  padding: 20px;
+  margin-top: 10px;
+
+}
+.btn{
+  margin: 5px;
+}
+.thead-color{
+  background-color: #0032A0;
+  color: #ffffff;
+}

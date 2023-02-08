@@ -1,0 +1,119 @@
+<!-- <app-student-dashboard></app-student-dashboard> -->
+
+
+<body>
+  <br>
+  <div class="teacherDetails">
+    <div class="Details">
+      <div class="userName">
+        <img id="picture" [src]="yourURL" alt="">
+        <span>
+          <h3>Leah Mangmang</h3>
+          <!-- <input id="file" type="file" class="btn btn-success btn-sm" (change)="selectFiles($event)">
+          <button id="saveBtn" class="btn btn-light">Save</button> -->
+        </span>
+      </div>
+
+      <!-- <div class="userInfo">
+        <ul>
+          <li>Birthdate: <span></span></li>
+          <li>Bachelor's Degree: <span></span></li>
+          <li>School Graduated: <span></span></li>
+          <li>Language/s: </li>
+        </ul>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="teacherCont">
+    <div class="scheduleBox">
+      <h3>Schedules</h3>
+      <table class="table">
+        <thead class="thead-color">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Schedule Date and Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let studentIn of BookingAccArray">
+            <th scope="row">{{studentIn.firstname+" "+studentIn.lastname}}</th>
+            <td>{{studentIn.date+" / "+studentIn.sTime+" - "+studentIn.eTime}}</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+
+    </div>
+    <div class="requestBox">
+      <h3>Pending Requests</h3>
+      <table class="table">
+        <thead class="thead-color">
+          <tr>
+            <th scope="col">ID Number</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">End Time</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of BookingArray">
+            <td scope="row">{{student.id}}</td>
+            <td>{{student.firstname}}</td>
+            <td>{{student.lastname}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.date}}</td>
+            <td>{{student.sTime}}</td>
+            <td>{{student.eTime}}</td>
+            <td>
+              <button class="btn btn-success px-3" routerLink="/book-edit/{{student.id}}"><i class="fa-solid fa-check"></i></button>&nbsp;
+                <button class="btn btn-danger px-3" (click)="setDelete(student)"><i class="fa-solid fa-xmark"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+
+  <!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion">
+    <ngb-panel title="Center Life">
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+        moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+        vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+        heard of them accusamus labore sustainable VHS.
+      </ng-template>
+    </ngb-panel>
+
+    <ngb-panel title="Personal Life">
+      <ng-template ngbPanelTitle>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+        moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+        vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+        heard of them accusamus labore sustainable VHS.
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Academic Life" [disabled]="false">
+      <ng-template ngbPanelContent>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta cumque corporis quod natus optio vero, minima tempore debitis magni recusandae quos quisquam, saepe temporibus earum, itaque possimus? Rerum, magni!
+
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion> -->
+
+
+
+
